@@ -14,7 +14,7 @@ ZenBook使用OpenAI的GPT模型来总结PDF文档。它从PDF中提取文本，�
     ```
 3. 安装所需的依赖：
     ```bash
-    pip install openai langchain PyPDF2 Flask
+    pip install openai langchain PyPDF2 pypdf Flask tiktoken
     ```
 4. 在`zenbook.py`文件中，找到`gpt_api_key`变量，将其设置为你的OpenAI的ChatGPT API密钥。
 
@@ -29,9 +29,7 @@ ZenBook使用OpenAI的GPT模型来总结PDF文档。它从PDF中提取文本，�
    - 输入2: 自动分割PDF（注意：这个模式有可能会出错，如果自动分割失败，请选择手动分割模式）
    
    
-   分割完成后，再次运行程序，并选择3模式，进入总结程序。
-
-   当总结模式运行完成，Flask服务器会启动。
+   分割完成后，再次运行程序，并选择3模式，进入总结程序。等待总结完成（1min左右），Flask服务器会启动。
 
 7. Flask服务器启动完成后，打开浏览器，输入`127.0.0.1:5000`来运行网页阅读器。
 
