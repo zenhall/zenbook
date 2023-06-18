@@ -16,13 +16,15 @@ ZenBook使用OpenAI的GPT模型来总结PDF文档。它从PDF中提取文本，�
     ```bash
     pip install openai langchain PyPDF2 pypdf Flask tiktoken
     ```
-4. 在`zenbook.py`文件中，找到`gpt_api_key`变量，将其设置为你的OpenAI的ChatGPT API密钥。
+4. 修改api key ：
+    在`zenbook.py`文件中，找到`gpt_api_key`变量，将其设置为你的OpenAI的ChatGPT API密钥。
+    免费密钥可以从[GPT-API-free](https://github.com/chatanywhere/GPT_API_free)获得。如果要使用openai原生的密钥，需要将`zenbook.py`文件中修改openai.api_base的行注释掉。
 
 5. 将你想要总结的PDF文件放入项目中的`book`文件夹，并以英文字母命名。
 
 6. 运行程序：
     ```bash
-    python summarize.py
+    python zenbook.py
     ```
    在运行程序时，首先输入放入的pdf文件名会，然后选择运行模式，首先要对pdf文件进行分割：
    - 输入1: 手动输入页码数组来分割PDF
