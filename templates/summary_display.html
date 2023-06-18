@@ -13,7 +13,7 @@
     <div class="scrollable" style="width: 50%; float: left;">
         {% for summary in summary_list %}
             {% set current_page = chapter_pages[loop.index - 1] %}
-            <h3>Chapter {{ loop.index }}</h3>
+            <h3>Chapter Summary</h3>
             <p>{{ summary.output_text }}</p >
             {% for step in summary.intermediate_steps %}
                 <h4><a href=" " onclick="jumpToPage(event, {{ loop.index + current_page }})">Page {{ loop.index + current_page }}</a></h4>
