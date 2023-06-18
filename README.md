@@ -45,7 +45,7 @@ ZenBook使用OpenAI的GPT模型来总结PDF文档。它从PDF中提取文本，�
 
 ## 依赖
 
-- Python 3.6+
+- Python 3.10
 - openai
 - langchain
 - PyPDF2
